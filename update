@@ -1,0 +1,8 @@
+#!/bin/sh
+
+if [ -z $1 ] || [ -z $2 ] || [ -z $3 ] ; then
+				echo missing args
+			exit 1
+fi
+
+./insert $1 $2 "`./get $1 $2 | jq ". + $3"`"
