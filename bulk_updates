@@ -1,0 +1,5 @@
+
+#!/bin/sh
+
+./get $1 $2
+echo $db | jq ". + $3"
